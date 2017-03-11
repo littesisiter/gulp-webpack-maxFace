@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>星座点单</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="telephone=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="/css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/order-cons.css" media="all">
+</head>
+<body>
+    <section class="cons-wrap">
+    	<div class="cons-swipe-sec swipe-sec">
+	    	<div class="cons-swipe-wp swipe-wp">
+	    		<ul class="cons-swipe-ul swipe-ul clear"></ul>
+	    	</div>
+    	</div>
+    	<div class="swipe-sec">
+    		<div class="pro-swipe-wp swipe-wp">
+	    		<ul class="pro-swipe-ul swipe-ul clear"></ul>
+	    	</div>
+    	</div>
+    	<a href="javascript:;" class="to-settle">去结算</a>
+    </section>
+ 	<script id="consTemp" type="text/html">
+        {{each consList as cons i}}
+        <li style="z-index:{{consList.length - i}}" class="{{i == 0 ? 'cur' :''}}">
+        	<em class="prev arrow"></em>
+            <p class="name">{{cons.name}}</p>
+            <em class="next arrow"></em>
+            <p class="time-slot">8.23-9.22</p>
+        </li>
+        {{/each}}
+    </script>
+    <script id="proTemp" type="text/html">
+        {{each consList as cons i}}
+        <li style="z-index:{{consList.length - i}}" class="{{i == 0 ? 'cur' :''}}">
+            <div class="pro-item">
+                <img src="{{cons.imageUrl}}" alt="">
+                <div class="pro-info">
+                    <div class="name-price wbox-v2">
+                        <p class="pro-name wbox-flex">我脸大醇香奶茶</p>
+                        <p class="label">星座价</p>
+                        <p class="price-sec">
+                            <span class="symbol">&yen;</span>
+                            <span class="price">10</span>
+                        </p>
+                    </div>
+                    <div class="attr-info wbox-v2">
+                        <p class="attr-item">常温</p>
+                        <p class="attr-item">正常糖</p>
+                        <p class="editable wbox-flex">
+                            <em class="icon"></em>
+                            <em class="desc">可修改</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </li>
+        {{/each}}
+    </script>
+<script src="../js/common.js"></script>
+<script src="../js/order-cons.js"></script>
+</body>
+</html>

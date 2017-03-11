@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>账户余额</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="telephone=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="/css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/account-balance.css" media="all">
+</head>
+<body class="noresult">
+	<section class="balance-wrap">
+		<div class="balance-sec">
+			<p class="title">账户余额</p>
+			<p class="detail-sec">
+				<span class="symbol">&yen;</span>
+				<span class="balance">1888.80</span>
+				<a href="javascript:;" class="recharge">充值</a>
+			</p>
+		</div>
+		<div class="consume-sec">
+			<p class="title">余额消费记录</p>
+			<ul class="consume-list">
+				<li class="wbox-v2">
+					<div class="wbox-flex">
+						<p class="name">储值卡消费</p>
+						<p class="date">2017-02-10 10:20</p>
+					</div>
+					<p class="money-sec">
+						<span class="type"></span>
+						<span class="symbol">&yen;</span>
+						<span class="money">12.00</span>
+					</p>
+				</li>
+				<li class="wbox-v2">
+					<div class="wbox-flex">
+						<p class="name">储值卡消费</p>
+						<p class="date">2017-02-10 10:20</p>
+					</div>
+					<p class="money-sec">
+						<span class="type"></span>
+						<span class="symbol">&yen;</span>
+						<span class="money">12.00</span>
+					</p>
+				</li>
+			</ul>
+			<div class="noresult-sec hide">
+				<p class="icon"></p>
+				<p class="desc">暂无任何消费记录</p>
+			</div>
+		</div>
+	</section>
+<script src="../js/common.js"></script>
+<script src="../js/account-balance.js"></script>    
+</body>
+</html>

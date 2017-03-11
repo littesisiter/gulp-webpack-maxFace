@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="telephone=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="/css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/index.css" media="all">
+</head>
+<body>
+	<header class="mf-header wbox-v2">
+		<p class="mf-logo"></p>
+		<p class="mf-article wbox-flex">Max Face</p>
+		<a href="javascript:;" class="to-login mf-btn">登录</a>
+	</header>
+    <section class="mf-wrap">
+    	<div class="swipe-sec">
+	    	<div id="J_swipe_wp" class="swipe-wp">
+	    		<ul id="J_swipe" class="swipe-ul clear"></ul>
+	    		<ul class="trigger"></ul>
+	    	</div>
+    	</div>
+    	<ul class="func-sec clear">
+			<li>
+				<div class="func-item wbox-v3">
+					<p class="func-icon"><em class="icon"></em><em class="shadow"></em></p>
+					<div class="func-font wbox-flex">
+						<p class="title">快速点单</p>
+						<p class="desc">简单不排队</p>
+					</div>
+				</div>				
+			</li>
+			<li>
+				<div class="func-item wbox-v3">
+					<p class="func-icon"><em class="icon"></em><em class="shadow"></em></p>
+					<div class="func-font wbox-flex">
+						<p class="title">星座点单</p>
+						<p class="desc">你是什么座</p>
+					</div>
+				</div>				
+			</li>
+			<li>
+				<div class="func-item wbox-v3">
+					<p class="func-icon"><em class="icon"></em><em class="shadow"></em></p>
+					<div class="func-font wbox-flex">
+						<p class="title">随机点单</p>
+						<p class="desc">随机生成惊喜</p>
+					</div>
+				</div>				
+			</li>
+			<li>
+				<div class="func-item wbox-v3">
+					<p class="func-icon"><em class="icon"></em><em class="shadow"></em></p>
+					<div class="func-font wbox-flex">
+						<p class="title">积分商城</p>
+						<p class="desc">积分免费换</p>
+					</div>
+				</div>				
+			</li>
+		</ul>
+		<div class="topic-list"></div>
+    </section>
+    <script id="swipeTemp" type="text/html">
+        {{each swipeList as swipe i}}
+        <li>
+            <a href="javascript:;">
+                <img src="{{swipe.imageUrl}}" alt="">
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script id="topicTemp" type="text/html">
+        {{each topicList as topic i}}
+        <div class="topic-sec">
+			<p class="topic-title pr">{{topic.title}}</p>
+			<div class="app-scroller pr">
+	            <div class="app-scroll-wp">
+	                <ul class="pro-list wbox">
+	               		{{each topic.proList as pro i}}
+				        <li>
+				            <a href="javascript:;">
+				                <img src="{{pro.imageUrl}}" alt="">
+				            </a>
+				        </li>
+				        {{/each}}
+	                </ul>
+	            </div>
+	        </div>
+		</div>
+        {{/each}}
+    </script>
+	<script src="../js/common.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>

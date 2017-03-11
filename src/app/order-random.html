@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>随机点单</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="telephone=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="/css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/css/order-random.css" media="all">
+</head>
+<body>
+   <section class="random-wrap">
+   		<div class="shake-sec">
+   			<p class="shake-icon animate"></p>
+   			<p class="split"></p>
+   			<div class="bottom-sec">
+	   			<p class="desc">拿起手机摇一摇</p>
+	   			<p class="desc">看看周围的人都在喝什么</p>
+	   			<p class="shake-figure"></p>
+   			</div>
+   			<audio id="run" src="../mp3/shake_sound.mp3" data-match="../mp3/shake_match.mp3" data-sound="../mp3/shake_sound.mp3"></audio>
+   		</div>
+		<div class="result-sec hide">
+			<div class="swipe-sec">
+				<div class="tip-sec"><em class="l1 line"></em><em>哇~周围的人都在喝</em><em class="l2 line"></em></div>
+	    		<div class="pro-swipe-wp swipe-wp">
+		    		<ul class="pro-swipe-ul swipe-ul clear"></ul>
+		    	</div>
+	    	</div>
+		</div>
+		<div class="load-sec hide">
+			<span class="load-icon"></span>
+			<span class="load-desc">正在查询</span>
+	   	</div>
+   </section>
+   <script id="proTemp" type="text/html">
+        {{each consList as cons i}}
+        <li style="z-index:{{consList.length - i}}" class="{{i == 0 ? 'cur' :''}}">
+        	<div class="pro-item">
+        		<p class="number">N0.{{i+1}}</p>
+	        	<img src="{{cons.imageUrl}}" alt="">
+	        	<div class="pro-info">
+                    <div class="name-price wbox-v2">
+                        <p class="pro-name wbox-flex">我脸大醇香奶茶</p>
+                        <p class="label">星座价</p>
+                        <p class="price-sec">
+                            <span class="symbol">&yen;</span>
+                            <span class="price">10</span>
+                        </p>
+                    </div>
+                    <div class="attr-info wbox-v2">
+                        <p class="attr-item">常温</p>
+                        <p class="attr-item">正常糖</p>
+                        <p class="editable wbox-flex">
+                            <em class="icon"></em>
+                            <em class="desc">可修改</em>
+                        </p>
+                    </div>
+                </div>
+                <a href="javascript:;" class="to-settle">立即下单</a>
+        	</div>
+        </li>
+        {{/each}}
+    </script>
+<script src="../js/common.js"></script>
+<script src="../js/order-random.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html>
