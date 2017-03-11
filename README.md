@@ -1,11 +1,11 @@
 # gulp-webpack-maxFace
-###gulp + webpack 构建多页面前端项目
+gulp + webpack 构建多页面前端项目
 
 ##安装依赖包：
-###npm install
+npm install
 
 ##开发：
-###gulp dev
+gulp dev
 
 ##发布：
-###gulp
+gulp
